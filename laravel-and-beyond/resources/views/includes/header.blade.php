@@ -6,19 +6,19 @@
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0 mx-4">
-                <li class="nav-item">
-                    <a class="nav-link" href="{{route('home')}}">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>    
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>  
+        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item mx-5">
+                <a class="nav-link" href="{{route('home')}}">Home</a>
+            </li>
+            <li class="nav-item mx-5">
+                <a class="nav-link" href="{{route('beers')}}">Must Try</a>
+            </li>
+            <li class="nav-item mx-5">
+                <a class="nav-link" href="#">Beergenda</a>
+            </li>    
+            <li class="nav-item mx-5">
+                <a class="nav-link" href="#">Link</a>
+            </li>  
         </ul>
     </div>  
 </nav>
