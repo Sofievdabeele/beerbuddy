@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Beer Buddy</title>
-</head>
-<body>
+@extends('layouts.layout')
+@section('content')
+
     <h1>Beer Buddy</h1>
     <h2>"Discover, connect, and elevate your beer experience"</h2>
     
@@ -16,5 +10,5 @@
         Overall, Beer Buddy is an essential tool for anyone who loves beer and wants to expand their knowledge and appreciation of this fantastic beverage.</p>
     
     <h3>"Get your beer journey started with Beer Buddy - your ultimate beer companion!"</h3>
-</body>
-</html>
+    
+@endsection

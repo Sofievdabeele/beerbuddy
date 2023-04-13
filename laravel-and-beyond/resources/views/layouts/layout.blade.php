@@ -9,7 +9,7 @@
 <body>
 
    <header>
-        @include(includes.header)
+        @include('includes.header')
     </header>
 
    <div>
@@ -17,8 +17,8 @@
    </div>
 
    <footer>
-        @include(includes.header)
+        @include('includes.footer')
    </footer>
-   
+
 </body>
 </html>
