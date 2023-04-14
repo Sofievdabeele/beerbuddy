@@ -1,8 +1,20 @@
-{{-- @props(['beer']) --}}
+@props(['beer'])
 
-<h1>Name</h1>
-<p>Type of beer</p>
-<p>country</p>
-<p>alcohol</p>
-<p>brewery</p>
-<p>more info</p>
+<h1>Name
+    {{$beer->name}}
+</h1>
+<p>Type of beer
+    {{$beer->type}}
+</p>
+<p>country
+    {{-- {{$beer->country}} --}}
+</p>
+<p>alcohol
+    {{-- {{$beer->alcohol_percentage}} --}}
+</p>
+<p>brewery
+    {{-- {{$beer->brewery}} --}}
+</p>
+<p>more info
+    {{-- {{$beer->info}} --}}
+</p>
