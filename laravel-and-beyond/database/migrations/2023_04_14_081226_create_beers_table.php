@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('name');
             $table->string('type');
             $table->string('country');
-            $table->integer('acohol_percentage');
+            $table->float('alcohol_percentage', 4, 2);
             $table->string('brewery');
             $table->text('info');
             $table->timestamps();
