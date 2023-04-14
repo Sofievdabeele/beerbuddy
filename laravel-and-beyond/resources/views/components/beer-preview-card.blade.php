@@ -1,7 +1,7 @@
-@props(['article'])
+{{-- @props(['beer']) --}}
 
 <h1>Name</h1>
-<p>Sort of beer</p>
+<p>Type of beer</p>
 <p>country</p>
 <p>alcohol</p>
 <p>brewery</p>

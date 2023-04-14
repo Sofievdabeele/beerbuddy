@@ -14,6 +14,9 @@
                 <a class="nav-link" href="{{route('beers')}}">Must Try</a>
             </li>
             <li class="nav-item mx-5">
+                <a class="nav-link" href="{{route('form')}}">Newbee</a>
+            </li>    
+            <li class="nav-item mx-5">
                 <a class="nav-link" href="#">Beergenda</a>
             </li>    
             <li class="nav-item mx-5">
