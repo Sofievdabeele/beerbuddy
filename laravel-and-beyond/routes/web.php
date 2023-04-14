@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\BeerController;
-use App\Http\Controllers\FormController;
+use App\Http\Controllers\NewBeerController;
 use App\Http\Controllers\HomeController;
 use Illuminate\Support\Facades\Route;
 
@@ -19,5 +19,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/',[HomeController::class, 'show'])->name('home');
 
 Route::get('/beers',[BeerController::class, 'show'])->name('beers');
+Route::get('/beers/{beer:slug}', [BeerController::class, 'showDetail'])->name('beer');
 
-Route::get('/form', [FormController::class, 'show'])->name('form');
+Route::get('/new-beer/create', [NewBeerController::class, 'create'])->name('create');
+Route::post('/new-beer', [NewBeerController::class, 'store'])->name('store');

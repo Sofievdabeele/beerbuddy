@@ -8,16 +8,16 @@
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item mx-5">
-                <a class="nav-link" href="{{route('home')}}">Home</a>
+                <a class="nav-link" href="{{route('home')}}">Brewery</a>
             </li>
             <li class="nav-item mx-5">
-                <a class="nav-link" href="{{route('beers')}}">Must Try</a>
+                <a class="nav-link" href="{{route('beers')}}">BeerTasting</a>
             </li>
             <li class="nav-item mx-5">
-                <a class="nav-link" href="{{route('form')}}">Newbee</a>
+                <a class="nav-link" href="{{route('create')}}">BeerBuilder</a>
             </li>    
             <li class="nav-item mx-5">
-                <a class="nav-link" href="#">Beergenda</a>
+                <a class="nav-link" href="{{route('store')}}">BeerBunker</a>
             </li>    
             <li class="nav-item mx-5">
                 <a class="nav-link" href="#">Link</a>

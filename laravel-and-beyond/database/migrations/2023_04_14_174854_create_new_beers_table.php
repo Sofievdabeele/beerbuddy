@@ -11,13 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('beers', function (Blueprint $table) {
+        Schema::create('new_beers', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('slug');
             $table->string('type');
             $table->string('country');
-            $table->float('alcohol_percentage', 4, 2);
+            $table->float('alcohol_percentage', 4, 1);
             $table->string('brewery');
             $table->text('info');
             $table->timestamps();
@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('beers');
+        Schema::dropIfExists('new_beers');
     }
 };

@@ -1,12 +1,14 @@
 @props(['beer'])
 
-<h2>{{$beer->name}}</h2>
-<p>{{$beer->type}}</p>
-<p>{{$beer->country}}</p>
-<p>{{$beer->alcohol_percentage}}%</p>
-<p>BREWERY: {{$beer->brewery}}
-</p>
-<p>More info: 
-    <br>
-    {{$beer->info}}
-</p>
+<div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="..." alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{$beer->name}}</h5>
+      <p class="card-text">{{$beer->type}}</p>
+      <p class="card-text">{{$beer->country}}</p>
+      <p class="card-text">{{$beer->alcohol_percentage}}%</p>
+      <p class="card-text">BREWERY: {{$beer->brewery}}</p>
+      
+      <a href="/beers/{{$beer->slug}}" class="btn btn-primary">More info</a>
+    </div>
+  </div>

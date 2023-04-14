@@ -1,8 +1,8 @@
 <?php
 
 namespace App\Http\Controllers;
-
 use App\Models\Beer;
+
 use Illuminate\Http\Request;
 
 class BeerController extends Controller
@@ -11,5 +11,9 @@ class BeerController extends Controller
     {
         $beers = Beer::all();
         return view ('beers', ["beers"=>$beers]);
+    }
+    public function showdetail(Beer $beer)
+    {
+        return view ('beer', ["beer"=>$beer]);
     }
 }

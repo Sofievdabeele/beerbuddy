@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
 <h1>Form</h1>
-<form action="" method="POST">
+<form action="{{route('store')}}" method="POST">
   @csrf
     <div class="form-row">
       <div class="col">
