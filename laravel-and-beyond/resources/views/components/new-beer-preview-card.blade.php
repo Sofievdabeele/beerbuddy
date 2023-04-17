@@ -9,6 +9,6 @@
       <p class="card-text">{{$newBeer->alcohol_percentage}}%</p>
       <p class="card-text">BREWERY: {{$newBeer->brewery}}</p>
       
-      <a href="/new-beers/{{$beer->id}}" class="btn btn-primary">More info</a>
+      <a href="/new-beers/{{$newBeer->id}}" class="btn btn-primary">More info</a>
     </div>
   </div>

@@ -41,6 +41,6 @@ class NewBeerController extends Controller
     }
     public function showdetail(New_beer $newBeer)
     {
-        return view ('new-beer', ["newBeer"=>$newBeer]);
+        return view('new-beer', ["newBeer"=>$newBeer]);
     }
 }

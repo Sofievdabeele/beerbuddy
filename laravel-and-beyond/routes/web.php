@@ -25,4 +25,4 @@ Route::get('/new-beer/create', [NewBeerController::class, 'create'])->name('crea
 Route::post('/new-beer', [NewBeerController::class, 'store'])->name('store');
 
 Route::get('/new-beers',[NewBeerController::class, 'show'])->name('new-beers');
-Route::get('/new-beers/{beer}', [NewBeerController::class, 'showDetail'])->name('new-beer');
+Route::get('/new-beers/{newBeer:id}', [NewBeerController::class, 'showDetail'])->name('new-beer');
