@@ -13,8 +13,9 @@ return new class extends Migration
     {
         Schema::create('beers', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('name');             
             $table->string('slug');
+            $table->string('image');
             $table->string('type');
             $table->string('country');
             $table->float('alcohol_percentage', 4, 2);
