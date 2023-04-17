@@ -19,22 +19,28 @@ class NewBeerController extends Controller
         return view('create');
     }
 
-    public function store(StoreNewBeerRequest $request): RedirectResponse
+    public function store(StoreNewBeerRequest $request) 
     {
+        $newBeer = new New_beer;
+        $newBeer->name = $request->input('name');
+        $newBeer->type = $request->input('type');
+        $newBeer->country = $request->input('country');
+        $newBeer->alcohol_percentage = $request->input('alcohol_percentage');
+        $newBeer->brewery = $request->input('brewery');
+        $newBeer->info = $request->input('info');
+        
+        $newBeer->save();
        
-            $new_beer = new New_beer;
-            $new_beer->name = $request->input('name');
-            $new_beer->type = $request->input('type');
-            $new_beer->country = $request->input('country');
-            $new_beer->alcohol_percentage = $request->input('alcohol_percentage');
-            $new_beer->brewery = $request->input('brewery');
-            $new_beer->info = $request->input('info');
-
-    
-            $new_beer->save();
-            
-            return redirect('/beers')->with('status', 'Beer has been inserted'); 
-
-     
+        return redirect('/new-beers'); 
+    }
+    public function show()
+    {
+        $newBeers = New_beer::all();
+        
+        return view('new-beers', ["newBeers"=>$newBeers]);
+    }
+    public function showdetail(New_beer $newBeer)
+    {
+        return view ('new-beer', ["newBeer"=>$newBeer]);
     }
 }

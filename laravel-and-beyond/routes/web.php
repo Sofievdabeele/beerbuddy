@@ -23,3 +23,6 @@ Route::get('/beers/{beer:slug}', [BeerController::class, 'showDetail'])->name('b
 
 Route::get('/new-beer/create', [NewBeerController::class, 'create'])->name('create');
 Route::post('/new-beer', [NewBeerController::class, 'store'])->name('store');
+
+Route::get('/new-beers',[NewBeerController::class, 'show'])->name('new-beers');
+Route::get('/new-beers/{beer}', [NewBeerController::class, 'showDetail'])->name('new-beer');

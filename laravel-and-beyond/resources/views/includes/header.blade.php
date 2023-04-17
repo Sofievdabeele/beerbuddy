@@ -17,7 +17,7 @@
                 <a class="nav-link" href="{{route('create')}}">BeerBuilder</a>
             </li>    
             <li class="nav-item mx-5">
-                <a class="nav-link" href="{{route('store')}}">BeerBunker</a>
+                <a class="nav-link" href="{{route('new-beers')}}">BeerBunker</a>
             </li>    
             <li class="nav-item mx-5">
                 <a class="nav-link" href="#">Link</a>

@@ -11,7 +11,7 @@ class StoreNewBeerRequest extends FormRequest
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
@@ -25,7 +25,7 @@ class StoreNewBeerRequest extends FormRequest
             'name' => 'required|string',
             'type' => 'required|string',
             'country' => 'required|string',
-            'alcohol_percentage' => 'required|float',
+            'alcohol_percentage' => 'required|numeric|decimal:1',
             'brewery' => 'required|string',
             'info' => 'required|string|max:10000'
         ];
