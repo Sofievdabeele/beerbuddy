@@ -19,7 +19,7 @@ class BeerFactory extends Factory
         return [
             'name' => fake()->name(),
             'slug' => fake()->slug(),
-            'image' => fake()->imageUrl(),
+            'image' => './Images/duvel.jpg',
             'type' => fake()->word(),
             'country' => fake()->country(),
             'alcohol_percentage' => fake()->randomFloat(2, 0, 100),
