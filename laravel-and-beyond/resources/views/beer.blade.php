@@ -15,12 +15,10 @@
         <div class=" flex-column h-15 w-40">
         
           <a href={{route('beers')}} class="btn btn-outline-dark btn-block shadow">Back To Overview</a>
-          <a href="#" class="btn btn-outline-dark btn-block shadow">Previous</a>
+          <a href={{route('previous')}} class="btn btn-outline-dark btn-block shadow">Previous</a>
           <a href="#" class="btn btn-outline-dark btn-block shadow">Next</a>
         </div>
       </div>
-      
-
     </div>
   </div>
 @endsection

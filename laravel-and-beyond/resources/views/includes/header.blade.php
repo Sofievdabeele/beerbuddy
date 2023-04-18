@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-    <a class="navbar-brand">
-        <img src="{{asset("./Images/beer-logo.jpg")}}" alt="Beer Logo" style="width:80px;" class="rounded"> 
+    <a class="navbar-brand">Logo
+        {{-- <img src="{{asset("./Images/beer-logo.jpg")}}" alt="Beer Logo" style="width:80px;" class="rounded">  --}}
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>

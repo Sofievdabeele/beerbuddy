@@ -16,4 +16,15 @@ class BeerController extends Controller
     {
         return view ('beer', ["beer"=>$beer]);
     }
+    // public function showPrevious(Beer $beer)
+    // {
+
+    //     $previous = Beer::where('id', '<', $beer->id)->orderBy('id','desc')->first();
+    //     return view ('previous', ['previous '=> $previous]);
+    // }
+    // public function showNext(Beer $beer)
+    // {
+    //     $next = Beer::where('id', '>', $beer->id)->orderBy('id')->first();
+    //     return view ('next');
+    // }
 }

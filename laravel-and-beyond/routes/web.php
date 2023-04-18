@@ -26,3 +26,6 @@ Route::post('/new-beer', [NewBeerController::class, 'store'])->name('store');
 
 Route::get('/new-beers',[NewBeerController::class, 'show'])->name('new-beers');
 Route::get('/new-beers/{newBeer:id}', [NewBeerController::class, 'showDetail'])->name('new-beer');
+
+Route::get('/previous/{id}', [NewBeerController::class, 'showPreviousNewBeer'])->name('previous-new-beer');
+Route::get('/next/{id}', [NEWBeerController::class, 'showNextNewBeer'])->name('next-new-beer');

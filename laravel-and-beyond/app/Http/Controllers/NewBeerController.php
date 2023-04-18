@@ -43,4 +43,17 @@ class NewBeerController extends Controller
     {
         return view('new-beer', ["newBeer"=>$newBeer]);
     }
+    public function showPreviousNewBeer($id)
+    {
+        $currentNewBeer = New_beer::findOrFail($id);
+        $previousNewBeer = New_beer::where('id', '<', $currentNewBeer->id)->orderBy('id','desc')->first();
+        return to_route('new-beer', ['newBeer' => $previousNewBeer]);
+    }
+    public function showNextNewBeer($id)
+    {
+        
+        $currentNewBeer = New_beer::findOrFail($id);
+        $nextNewBeer = New_beer::where('id', '>', $currentNewBeer->id)->orderBy('id')->first();
+        return to_route('new-beer', ['newBeer' => $nextNewBeer]);
+    }
 }
