@@ -14,11 +14,11 @@
       <div class="d-flex justify-content-center align-items-center mt-4">
         <div class=" flex-column h-15 w-40">
         
-          <a href="{{route('new-beers')}}" class="btn btn-outline-dark btn-block shadow">Back To Overview</a>
+          <a href="{{route('new-beers')}}" class="btn btn-outline-dark btn-block shadow">Back To Bunker</a>
           
-          <a href="/previous/{{$newBeer->id}}" class="btn btn-outline-dark btn-block shadow">Previous</a>
+          <a href="/previousnewbeer/{{$newBeer->id}}" class="btn btn-outline-dark btn-block shadow">Previous</a>
           
-          <a href="/next/{{$newBeer->id}}" class="btn btn-outline-dark btn-block shadow">Next</a>
+          <a href="/nextnewbeer/{{$newBeer->id}}" class="btn btn-outline-dark btn-block shadow">Next</a>
         </div>
       </div>
     </div>

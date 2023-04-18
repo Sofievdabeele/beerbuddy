@@ -12,19 +12,24 @@ class BeerController extends Controller
         $beers = Beer::all();
         return view ('beers', ["beers"=>$beers]);
     }
+
     public function showdetail(Beer $beer)
     {
         return view ('beer', ["beer"=>$beer]);
     }
-    // public function showPrevious(Beer $beer)
-    // {
 
-    //     $previous = Beer::where('id', '<', $beer->id)->orderBy('id','desc')->first();
-    //     return view ('previous', ['previous '=> $previous]);
-    // }
-    // public function showNext(Beer $beer)
-    // {
-    //     $next = Beer::where('id', '>', $beer->id)->orderBy('id')->first();
-    //     return view ('next');
-    // }
+    public function showPreviousBeer($id)
+    {
+        // dd($id);
+        $currentBeer = Beer::findOrFail($id);
+        $previousBeer = Beer::where('id', '<', $currentBeer->id)->orderBy('id','desc')->first();
+        return to_route('beer', ['beer' => $previousBeer]);
+    }
+
+    public function showNextBeer($id)
+    {
+        $currentBeer = Beer::findOrFail($id);
+        $nextBeer = Beer::where('id', '>', $currentBeer->id)->orderBy('id')->first();
+        return to_route('beer', ['beer' => $nextBeer]);
+    }
 }
