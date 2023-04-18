@@ -1,11 +1,11 @@
 @extends('layouts.layout')
 @section('content')
 
-<div class="container">
-    <h1>New Beers</h1>
-
+<h1 class="text-center mx-auto mt-3 mb-5">My Beer Collection</h1>
+<div class="container d-flex flex-wrap mx-auto w-100 gap-1" id="card-container">
+    
     @foreach ($newBeers as $newBeer)
-        <p class="card-text"><x-new-beer-preview-card :newBeer="$newBeer" /></p>
+        <x-new-beer-preview-card :newBeer="$newBeer"/>
     @endforeach
 </div>
 
