@@ -21,15 +21,18 @@ Route::get('/',[HomeController::class, 'show'])->name('home');
 Route::get('/beers',[BeerController::class, 'show'])->name('beers');
 Route::get('/beers/{beer:slug}', [BeerController::class, 'showDetail'])->name('beer');
 
+Route::get('/previousbeer/{id}', [BeerController::class, 'showPreviousBeer'])->name('previous-beer');
+Route::get('/nextbeer/{id}', [BeerController::class, 'showNextBeer'])->name('next-beer');
+
 Route::get('/new-beer/create', [NewBeerController::class, 'create'])->name('create');
 Route::post('/new-beer', [NewBeerController::class, 'store'])->name('store');
 
 Route::get('/new-beers',[NewBeerController::class, 'show'])->name('new-beers');
 Route::get('/new-beers/{newBeer:id}', [NewBeerController::class, 'showDetail'])->name('new-beer');
 
-
 Route::get('/previousnewbeer/{id}', [NewBeerController::class, 'showPreviousNewBeer'])->name('previous-new-beer');
 Route::get('/nextnewbeer/{id}', [NewBeerController::class, 'showNextNewBeer'])->name('next-new-beer');
 
-Route::get('/previousbeer/{id}', [BeerController::class, 'showPreviousBeer'])->name('previous-beer');
-Route::get('/nextbeer/{id}', [BeerController::class, 'showNextBeer'])->name('next-beer');
+Route::get('/new-beer/edit/{newBeer:id}', [NewBeerController::class, 'editNewBeer'])->name('edit-new-beer');
+Route::post('/new-beer/update', [NewBeerController::class, 'updateNewBeer'])->name('update-new-beer');
+Route::get('/new-beer/delete', [NewBeerController::class, 'deleteNewBeer'])->name('delete-new-beer');

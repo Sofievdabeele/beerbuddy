@@ -13,8 +13,8 @@
       <div class=" flex-column h-15 w-40">
       
         <a href="/new-beers/{{$newBeer->id}}" class="btn btn-outline-dark btn-block shadow">Info</a>
-        <a href="#" class="btn btn-outline-dark btn-block shadow">Edit</a>
-        <a href="#" class="btn btn-outline-dark btn-block shadow">Delete</a>
+        {{-- <a href="{{route('edit-new-beer')}}" class="btn btn-outline-dark btn-block shadow">Edit</a> --}}
+        <a href="{{route('delete-new-beer')}}" class="btn btn-outline-dark btn-block shadow">Delete</a>
       </div>
     </div>
     

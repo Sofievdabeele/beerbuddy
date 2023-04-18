@@ -58,4 +58,30 @@ class NewBeerController extends Controller
         $nextNewBeer = New_beer::where('id', '>', $currentNewBeer->id)->orderBy('id')->first();
         return to_route('new-beer', ['newBeer' => $nextNewBeer]);
     }
+
+    // Show the form for editing
+    public function editNewBeer(New_beer $newBeer)
+    {
+        return view('edit-new-beer', ["newBeer"=>$newBeer]);
+    }
+
+    public function updateNewBeer(StoreNewBeerRequest $request, New_beer $newBeer)
+    {
+        $newBeer->name = $request->input('name');
+        $newBeer->type = $request->input('type');
+        $newBeer->country = $request->input('country');
+        $newBeer->alcohol_percentage = $request->input('alcohol_percentage');
+        $newBeer->brewery = $request->input('brewery');
+        $newBeer->info = $request->input('info');
+        
+        $newBeer->fill($request->post())->save();
+        $newBeer->update($request->all());
+        return redirect('/new-beers')->with('success','User updated successfully'); 
+    }
+
+    public function deleteNewBeer(New_beer $newBeer)
+    {
+        $newBeer->delete();
+        return redirect('/new-beers')->with('success','User deleted successfully'); 
+    }
 }

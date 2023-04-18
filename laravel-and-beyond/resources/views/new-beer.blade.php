@@ -19,6 +19,10 @@
           <a href="/previousnewbeer/{{$newBeer->id}}" class="btn btn-outline-dark btn-block shadow">Previous</a>
           
           <a href="/nextnewbeer/{{$newBeer->id}}" class="btn btn-outline-dark btn-block shadow">Next</a>
+
+          <a href="/new-beer/edit/{{$newBeer->id}}" class="btn btn-outline-dark btn-block shadow">Edit</a>
+
+          
         </div>
       </div>
     </div>
