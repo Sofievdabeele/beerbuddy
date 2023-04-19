@@ -3,6 +3,8 @@
 use App\Http\Controllers\BeerController;
 use App\Http\Controllers\NewBeerController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\SessionController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,3 +38,12 @@ Route::get('/nextnewbeer/{id}', [NewBeerController::class, 'showNextNewBeer'])->
 Route::get('/new-beer/edit/{newBeer:id}', [NewBeerController::class, 'editNewBeer'])->name('edit-new-beer');
 Route::post('/new-beer/update/{newBeer:id}', [NewBeerController::class, 'updateNewBeer'])->name('update-new-beer');
 Route::get('/new-beer/delete/{newBeer:id}', [NewBeerController::class, 'deleteNewBeer'])->name('delete-new-beer');
+
+Route::get('/profile', [ProfileController::class, 'index'])
+    ->name('profile')
+    ->middleware('auth');
+
+// login/register/logout
+Route::get('/login', [SessionController::class, 'login'])->name('login');
+Route::get('/register', [SessionController::class, 'register'])->name('register');
+Route::get('/logout', [SessionController::class, 'logout'])->name('logout');

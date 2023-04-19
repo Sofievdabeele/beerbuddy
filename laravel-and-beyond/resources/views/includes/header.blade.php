@@ -20,7 +20,7 @@
                 <a class="nav-link" href="{{route('new-beers')}}">BeerBunker</a>
             </li>    
             <li class="nav-item mx-5">
-                <a class="nav-link" href="#">Link</a>
+                <a class="nav-link" href="{{route('profile')}}">Register</a>
             </li>  
         </ul>
     </div>  
