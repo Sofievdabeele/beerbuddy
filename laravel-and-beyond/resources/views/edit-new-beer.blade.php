@@ -12,26 +12,23 @@
                 </div>
             </div>
         </div>
-         @if(session('status'))
-        <div class="alert alert-success mb-1 mt-1">
-            {{ session('status') }}
-        </div>
+        @if(session('status'))
+          <div class="alert alert-success mb-1 mt-1">
+              {{ session('status') }}
+          </div>
         @endif
    
-        <form action="{{ route('update-new-beer') }}" method="POST">
+        <form action="/new-beer/update/{{$newBeer->id}}" method="POST">
             @csrf
-           
-            <form action="{{route('store')}}" method="POST">
-                @csrf
                   <div class="form-row">
                     <div class="col">
-                      <input type="text" class="form-control" id="name" placeholder="Enter beer name" name="name" value="{{old('name')}}">
+                      <input type="text" class="form-control" id="name" placeholder="Enter beer name" name="name" value="{{$newBeer->name}}">
                         @error('name')
                           <span class="text-danger">{{$message}}</span>
                         @enderror
                     </div>
                     <div class="col">
-                      <input type="text" class="form-control" id="type" placeholder="Type of beer" name="type" value="{{old('type')}}">
+                      <input type="text" class="form-control" id="type" placeholder="Type of beer" name="type" value="{{$newBeer->type}}">
                         @error('type')
                           <span class="text-danger">{{$message}}</span>
                         @enderror
@@ -39,7 +36,7 @@
                   </div> 
                   <div class="form-row">
                     <div class="col">
-                      <input type="text" class="form-control" id="country" placeholder="Enter country" name="country" value="{{old('country')}}">
+                      <input type="text" class="form-control" id="country" placeholder="Enter country" name="country" value="{{$newBeer->country}}">
                       @error('country')
                       <span class="text-danger">{{$message}}</span>
                       @enderror

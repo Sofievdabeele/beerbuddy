@@ -34,5 +34,5 @@ Route::get('/previousnewbeer/{id}', [NewBeerController::class, 'showPreviousNewB
 Route::get('/nextnewbeer/{id}', [NewBeerController::class, 'showNextNewBeer'])->name('next-new-beer');
 
 Route::get('/new-beer/edit/{newBeer:id}', [NewBeerController::class, 'editNewBeer'])->name('edit-new-beer');
-Route::post('/new-beer/update', [NewBeerController::class, 'updateNewBeer'])->name('update-new-beer');
-Route::get('/new-beer/delete', [NewBeerController::class, 'deleteNewBeer'])->name('delete-new-beer');
+Route::post('/new-beer/update/{newBeer:id}', [NewBeerController::class, 'updateNewBeer'])->name('update-new-beer');
+Route::get('/new-beer/delete/{newBeer:id}', [NewBeerController::class, 'deleteNewBeer'])->name('delete-new-beer');

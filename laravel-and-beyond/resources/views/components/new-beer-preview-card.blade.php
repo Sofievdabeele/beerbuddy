@@ -14,7 +14,7 @@
       
         <a href="/new-beers/{{$newBeer->id}}" class="btn btn-outline-dark btn-block shadow">Info</a>
         {{-- <a href="{{route('edit-new-beer')}}" class="btn btn-outline-dark btn-block shadow">Edit</a> --}}
-        <a href="{{route('delete-new-beer')}}" class="btn btn-outline-dark btn-block shadow">Delete</a>
+        <a href="/new-beer/delete/{{$newBeer->id}}" class="btn btn-outline-dark btn-block shadow">Delete</a>
       </div>
     </div>
     

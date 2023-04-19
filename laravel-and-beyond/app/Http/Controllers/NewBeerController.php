@@ -67,21 +67,21 @@ class NewBeerController extends Controller
 
     public function updateNewBeer(StoreNewBeerRequest $request, New_beer $newBeer)
     {
-        $newBeer->name = $request->input('name');
-        $newBeer->type = $request->input('type');
-        $newBeer->country = $request->input('country');
-        $newBeer->alcohol_percentage = $request->input('alcohol_percentage');
-        $newBeer->brewery = $request->input('brewery');
-        $newBeer->info = $request->input('info');
+        $newBeer->name = $request->name;
+        $newBeer->type = $request->type;
+        $newBeer->country = $request->country;
+        $newBeer->alcohol_percentage = $request->alcohol_percentage;
+        $newBeer->brewery = $request->brewery;
+        $newBeer->info = $request->info;
         
-        $newBeer->fill($request->post())->save();
-        $newBeer->update($request->all());
-        return redirect('/new-beers')->with('success','User updated successfully'); 
+        // $newBeer->save();
+        $newBeer->update();
+        return redirect('/new-beers'); 
     }
 
     public function deleteNewBeer(New_beer $newBeer)
     {
         $newBeer->delete();
-        return redirect('/new-beers')->with('success','User deleted successfully'); 
+        return redirect('/new-beers'); 
     }
 }
