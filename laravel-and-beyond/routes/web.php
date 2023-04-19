@@ -46,4 +46,5 @@ Route::get('/profile', [ProfileController::class, 'index'])
 // login/register/logout
 Route::get('/login', [SessionController::class, 'login'])->name('login');
 Route::get('/register', [SessionController::class, 'register'])->name('register');
+Route::post('/register', [SessionController::class, 'handleRegister'])->name('handle-register');
 Route::get('/logout', [SessionController::class, 'logout'])->name('logout');
