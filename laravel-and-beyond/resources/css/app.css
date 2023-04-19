@@ -1,0 +1,28 @@
+nav{
+    background-color: #964B00;
+    color: #FFFFF0;
+    height: 100px;
+}
+
+div#footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    margin-top: 30px;
+  }
+nav#collapsibleNavbar{
+    background-color: red;
+    display: flex;
+}
+ul{
+    justify-content: end;
+}
+body{
+    background-color: #FFFFF0;
+}
+h1{
+    justify-content: center;
+}
+p{
+    text-align: justify;
+}
