@@ -34,4 +34,4 @@
 <h5>Personality:</h5>
 <p>I am an adventurous and outgoing person who enjoys trying new things. I am also very passionate about the things I love, and beer is definitely one of them! I am always up for a good conversation about craft beer and love to share my knowledge with others. I am excited to be part of this community and look forward to learning from and connecting with other beer enthusiasts.</p>
 
-@ensection
+@endsection

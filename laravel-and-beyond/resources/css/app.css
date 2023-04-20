@@ -85,3 +85,45 @@ p{
     font-family: 'Indie Flower', cursive;
     font-family: 'Open Sans', sans-serif;
 }
+.form-container{
+    display: flex;
+    justify-content: center;
+}
+div.register-form{
+    width: 40%;
+    background-color: #a46863;
+    display: flex;
+    justify-content: center;
+    padding: 40px 0 40px 0;
+    border-radius: 35px; 
+    box-shadow: #4a3f3e63 3px 3px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-field{
+    margin: 10px;
+}
+.form-remeber{
+    margin: 7px;
+    padding-left: 8px;
+}
+.form-control{
+    background-color: #FFFFF0;
+    border-radius: 10px;
+    box-shadow: #4a3f3e63 2px 2px inset;
+}
+.form-button{
+    background-color: #A65149;
+    border-radius: 10px; 
+    height: 38px;
+    width: 201px;
+    margin: 10px;
+    box-shadow: #4a3f3e63 3px 3px;
+}
+.danger{
+    color: #F2CB05;
+
+}

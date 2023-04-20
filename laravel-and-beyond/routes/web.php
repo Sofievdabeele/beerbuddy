@@ -44,7 +44,9 @@ Route::get('/profile', [ProfileController::class, 'index'])
     ->middleware('auth');
 
 // login/register/logout
-Route::get('/login', [SessionController::class, 'login'])->name('login');
 Route::get('/register', [SessionController::class, 'register'])->name('register');
 Route::post('/register', [SessionController::class, 'handleRegister'])->name('handle-register');
+Route::get('/login', [SessionController::class, 'login'])->name('login');
+Route::post('/login-user', [SessionController::class, 'authenticate'])->name('login-user');
+Route::get('/dashboard', [SessionController::class, 'dashboard'])->name('dashboard');
 Route::get('/logout', [SessionController::class, 'logout'])->name('logout');
