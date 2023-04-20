@@ -49,4 +49,5 @@ Route::post('/register', [SessionController::class, 'handleRegister'])->name('ha
 Route::get('/login', [SessionController::class, 'login'])->name('login');
 Route::post('/login-user', [SessionController::class, 'authenticate'])->name('login-user');
 Route::get('/dashboard', [SessionController::class, 'dashboard'])->name('dashboard');
-Route::get('/logout', [SessionController::class, 'logout'])->name('logout');
+// Route::get('/dashboard', 'dashboard')->name('dashboard');
+Route::post('/logout', [SessionController::class, 'logout'])->name('logout');

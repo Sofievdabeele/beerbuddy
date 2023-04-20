@@ -10,5 +10,5 @@
         Overall, Beer Buddy is an essential tool for anyone who loves beer and wants to expand their knowledge and appreciation of this fantastic beverage.</p>
     
     <h2>"Get your beer journey started with Beer Buddy - your ultimate beer companion!"</h2>
-    </div>
+</div>
 @endsection

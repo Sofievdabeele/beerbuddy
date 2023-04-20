@@ -39,13 +39,34 @@
             <img class="logo" src="{{asset("./Images/beer.png")}}" alt="Beer Logo"> 
         </a>
     <ul>
-        <li><a href="{{route('home')}}">Brewery</a></li>
-        <li><a href="{{route('beers')}}">BeerTasting</a></li>
-        <li><a href="{{route('create')}}">BeerBuilder</a></li>
-        <li><a href="{{route('new-beers')}}">BeerBunker</a></li>
-        <li><a href="{{route('register')}}">Register</a></li>
-        <li><a href="{{route('login')}}">Login</a></li>
-        <li><a href="{{route('logout')}}">Logout</a></li>
+        @guest
+            <li><a href="{{route('home')}}">Brewery</a></li>
+            <li><a href="{{route('beers')}}">BeerTasting</a></li>
+            <li><a class=" {{ (request()->is('login')) ? 'active' : '' }}" href="{{route('login')}}">Login</a></li>
+            <li><a class="{{ (request()->is('register')) ? 'active' : '' }}" href="{{route('register')}}">Register</a></li>
+            @else 
+            <li><a href="{{route('home')}}">Brewery</a></li>
+            <li><a href="{{route('beers')}}">BeerTasting</a></li>
+            <li><a href="{{route('create')}}">BeerBuilder</a></li>
+            <li><a href="{{route('new-beers')}}">BeerBunker</a></li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    {{ Auth::user()->name }}
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">User settings</li>
+                    <li class="dropdown-item">Upgrade</li>
+                <li><a class="dropdown-item" href="{{ route('logout') }}"
+                    onclick="event.preventDefault();
+                    document.getElementById('logout-form').submit();"
+                    >Logout</a>
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                        @csrf
+                    </form>
+                </li>
+                </ul>
+            </li>   
+        @endguest
     </ul>
     
     <button class="burgermenu" type="button">
