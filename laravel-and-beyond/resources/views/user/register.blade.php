@@ -2,6 +2,7 @@
 @section('content')
 <h1>Register</h1>
 <form action="{{route ('handle-register')}}" method="POST">
+    @csrf
     <div class="form-outline mb-4">
         <input type="name" class="form-control" placeholder="name" name="name"/>
         <label class="form-label">name</label>
@@ -9,7 +10,7 @@
             <span class="text-danger">{{$message}}</span>
         @enderror
     </div>
-    <!-- Email input -->
+
     <div class="form-outline mb-4">
         <input type="email" class="form-control" placeholder="email" name="email"/>
         <label class="form-label">Email address</label>
@@ -17,8 +18,7 @@
             <span class="text-danger">{{$message}}</span>
         @enderror
     </div>
-  
-    <!-- Password input -->
+
     <div class="form-outline mb-4">
         <input type="password" class="form-control" placeholder="password" name="password"/>
         <label class="form-label">Password</label>
@@ -34,5 +34,7 @@
             <span class="text-danger">{{$message}}</span>
         @enderror
     </div>
+
+    <button type="submit" class="btn btn-secondary btn-lg btn-block">REGISTER</button> 
 
 @endsection
