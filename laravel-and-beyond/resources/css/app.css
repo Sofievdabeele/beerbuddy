@@ -133,5 +133,13 @@ form{
 }
 .danger{
     color: #F2CB05;
-
+}
+.profile-links{
+    margin: 50px;
+    display: flex;
+    justify-content: space-around;
+    
+}
+.profile-link:hover{
+    transform: scale(1.1);
 }
