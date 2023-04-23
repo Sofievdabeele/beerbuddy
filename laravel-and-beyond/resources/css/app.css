@@ -1,18 +1,12 @@
 body {
-    position: relative;
+
     margin: 0;
     padding: 0;
     min-height: 100vh;
-}
-footer {
-    
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 50px; 
-    text-align: center;
+    background-color: #FFFFF0;
 }
 
+/* header */
 nav{
     color: #FFFFF0;
     height: 150px;
@@ -22,7 +16,7 @@ nav{
     width: 100%;
 }
 .nav{
-    max-height: 80px;
+    max-height: 90px;
     width: 100%;
     background-color: #F29F05;
     display: flex;
@@ -30,6 +24,19 @@ nav{
     align-items: center;
     justify-content: space-between;
     padding: 0 20px;
+    border-top: solid 4px #000000;
+    border-bottom: solid 4px #000000;
+}
+.logo{
+    width: 30%;
+    min-width: 42px;
+    min-width: 138px;
+    border-radius: 50%;
+    border: solid black 4px;
+    box-shadow: #4a3f3e63 3px 3px 20px;
+}
+.logo:hover{
+    transform: scale(1.1);
 }
 ul{
     height: 100px;
@@ -43,39 +50,57 @@ li a {
     padding: 8px;
     color: #FFFFF0;
     margin-right: 30px;
-  }
-  li a:hover {
+    font-size: larger;
+}
+li a:hover {
     color: #a46863;
     font-weight: bolder;
     text-decoration: none;
-  }
-.logo{
-    width: 30%;
-    min-width: 42px;
-    min-width: 138px;
 }
-.logo:hover{
-    transform: scale(1.1);
+.dropdown-menu{
+    background-color: #FFFFF0;
+    height: 150px
+    
+}
+.dropdown-item{
+    color: #A65149;
+    margin: 10px 0;
+}
+.dropdown-item:hover{
+    background-color: #a46863;
+    color: #FFFFF0;
 }
 .burgermenu{
     width: 30%;
     max-width: 116px;
     min-width: 54px;
 }
+.burger{
+    border: solid black 4px;
+    box-shadow: #4a3f3e63 3px 3px 20px;
+    border-radius: 10px;
+    padding: 10px;
+}
 .burger:hover{
     transform: scale(1.1);
 }
 
-body{
-    background-color: #FFFFF0;
+/* footer */
+footer {
+    position: static;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
 }
+
 h1{
     color:  #A65149;
     text-align: center;
     font-family: 'Indie Flower', cursive;
     font-size: 500%;
     font-weight: bolder;
-    margin-bottom: 35px;
+    margin: 35px 0;
+    
 }
 h2{
     font-family: 'Abril Fatface', cursive;
@@ -84,7 +109,6 @@ h2{
     font-family: 'Open Sans', sans-serif;
     font-style: italic;
     text-align: center;
-
 }
 p{
     margin: 50px 0 50px 0;
@@ -93,6 +117,80 @@ p{
     font-family: 'Indie Flower', cursive;
     font-family: 'Open Sans', sans-serif;
 }
+
+div.container{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+/* cards */
+.card-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 0 10%;
+}
+.cards{
+    background-color:#f29f0524;
+    color: #A65149;
+    border-radius: 35px;
+    border: none;
+    box-shadow: #4a3f3e63 3px 3px 20px;
+    width: 40%;
+    min-width: 250px;
+    max-width: 340px;
+    margin: 20px;
+}
+.card-img-top{
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+h3.card-title{
+    font-weight: bolder;
+    margin-top: 20px;
+}
+p.card-text{
+    margin: 0;
+    text-align: left;
+}
+.card{
+    padding: 40px;
+    background-color:#f29f0524;
+    color: #A65149;
+    border-radius: 35px;
+    border: none;
+    box-shadow: #4a3f3e63 3px 3px 20px;
+    margin: auto;
+    width: 80%;
+}
+/* buttons */
+div#button-group{
+    margin: 30px 0;
+    padding-top: 10px;
+}
+.btn{
+    background-color: #a8605a;
+    color:  #FFFFF0;
+    border: none;
+    box-shadow: #4a3f3e63 3px 3px 20px;
+}
+
+/* beer builder form */
+.beer-builder-form{
+    width: 80%;
+    margin: auto;
+}
+div.form-row{
+    margin-bottom: 20px;
+}
+div.col{
+    margin: 0 5px;
+}
+.home-button{
+    margin: 40px;
+}
+
 .form-container{
     display: flex;
     justify-content: center;
@@ -142,4 +240,19 @@ form{
 }
 .profile-link:hover{
     transform: scale(1.1);
+}
+
+/* beer builder form */
+.beer-builder-form{
+    width: 80%;
+    margin: auto;
+}
+div.form-row{
+    margin-bottom: 20px;
+}
+div.col{
+    margin: 0 5px;
+}
+.home-button{
+    margin: 40px;
 }
