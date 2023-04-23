@@ -1,7 +1,7 @@
 @extends('layouts.layout')
 @section('content')
 
-<h1>My Beer Collection</h1>
+<h1>{{ Auth::user()->name }} 's Beer Collection</h1>
 <div class="card-container">
     
     @foreach ($newBeers as $newBeer)
