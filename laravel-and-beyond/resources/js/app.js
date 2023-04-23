@@ -1,5 +1,4 @@
 import './bootstrap';
-
 // hamburger menu nav bar
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
