@@ -2,6 +2,11 @@ BeerBuddy: a beer app
 
 You can find the special beers that you need to try, but when you log in, you can keep track of the beers you already drank.
 
+Run the app:
+
+php artisan serve
+npm run dev
+
 Languages: 
 • Laravel
 • Javascript
