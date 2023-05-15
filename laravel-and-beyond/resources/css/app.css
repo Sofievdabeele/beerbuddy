@@ -40,11 +40,14 @@ a{
     font-size: 110%;
 }
 .container-nav{
+    display: flex;
+    flex-direction: row;
     width: 100%;
     margin: 0 auto;
 }
 .navbar{
-    margin-top: 3%;
+    width: 100vw;
+    margin: 3%; 
     background-color: #A65149;
     min-height: 70px;
     max-height: 140px;
@@ -53,7 +56,7 @@ a{
     align-content: center;
 }
 .nav-branding{
-    width: 20%;
+    width: 5%;
     min-width: 60px;
     border-radius: 50%;
     border: solid black 4px;
